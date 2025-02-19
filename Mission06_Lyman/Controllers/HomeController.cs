@@ -23,8 +23,10 @@ namespace Mission06_Lyman.Controllers
         [HttpGet]
         public IActionResult EnterMovie()
         {
+            ViewBag.Categories = _context.Categories.ToList(); // Send categories to view
             return View();
         }
+
         [HttpPost]
         public IActionResult EnterMovie(Movie response)
         {
@@ -32,6 +34,12 @@ namespace Mission06_Lyman.Controllers
             _context.SaveChanges();
 
             return View("Confirmation");
+        }
+        public IActionResult WaitList()
+        {
+            var movies = _context.Movies.ToList();
+
+            return View(movies); 
         }
     }
 }

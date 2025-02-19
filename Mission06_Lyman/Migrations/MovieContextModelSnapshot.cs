@@ -34,9 +34,11 @@ namespace Mission06_Lyman.Migrations
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("LentTo")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Notes")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Rating")
@@ -48,9 +50,7 @@ namespace Mission06_Lyman.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<int>("Year")
-                        .IsRequired()
                         .HasColumnType("INTEGER");
-                        
 
                     b.HasKey("MovieId");
 

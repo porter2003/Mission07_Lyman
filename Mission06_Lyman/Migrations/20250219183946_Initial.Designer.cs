@@ -10,7 +10,7 @@ using Mission06_Lyman.Models;
 namespace Mission06_Lyman.Migrations
 {
     [DbContext(typeof(MovieContext))]
-    [Migration("20250210225135_Initial")]
+    [Migration("20250219183946_Initial")]
     partial class Initial
     {
         /// <inheritdoc />

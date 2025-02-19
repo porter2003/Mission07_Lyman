@@ -8,8 +8,11 @@
 <h1>Enter a movie:</h1>
 <form method="post">
 
-    <label asp-for="Category">Category: </label>
-    <input asp-for="Category"/>
+    <label for="Category">Category:</label>
+    <select asp-for="CategoryId" asp-items="@(new SelectList(ViewBag.Categories, "CategoryId", "CategoryName"))">
+        <option value="">-- Select a Category --</option>
+    </select>
+
     <br />
 
     <label asp-for="Title">Title: </label>

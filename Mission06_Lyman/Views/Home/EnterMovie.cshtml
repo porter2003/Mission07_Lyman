@@ -15,6 +15,9 @@
 
     <br />
 
+    <input type="hidden" asp-for="MovieId"/>
+    <br />
+
     <label asp-for="Title">Title: </label>
     <input asp-for="Title"/>
     <br />
@@ -51,5 +54,13 @@
     <input asp-for="Notes" />
     <br />
 
+    <label asp-for="CopiedToPlex">CopiedToPlex: </label>
+    <input asp-for="CopiedToPlex" />
+    <br />
+
+
     <button type="submit">Submit Movie</button>
+    
+    <div asp-validation-summary="All"></div>
+
 </form>
